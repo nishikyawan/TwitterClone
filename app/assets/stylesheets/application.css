@@ -1,0 +1,86 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 980px;
+  margin: 0 auto;
+}
+
+.header{
+  background-color: #EEEEEE;
+  height: 50px;
+  font-size: 1.5rem;
+}
+
+.header-logo{
+  height: 30px;
+  padding: 10px;
+}
+
+.header a{
+  float: left;
+}
+
+.header p{
+  float: left;
+  font-weight: bold;
+}
+
+#submit_btn{
+  transition-duration:1s;
+}
+
+#submit_btn:hover{
+  background-color: #59b1eb;
+}
+
+.new_content{
+  margin: 20px 0;
+  font-size: 1.5rem;
+}
+
+#blog_content{
+  width :200px;
+  height: 20px;
+  border: 1px solid #59b1eb;
+  border-radius: 0.67em;
+}
+
+.content h2{
+  text-align: center;
+}
+
+table{
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+table tr{
+  border-bottom: solid 1px #eee;
+}
+
+table tr:hover{
+  background-color: #d4f0fd;
+}
+
+table th,table td{
+  text-align: center;
+  width: 25%;
+  padding: 15px 0;
+}
+
+.footer{
+  background-color: #DDFFFF;
+  display: table;
+  height: 30px;
+  width: 100%;
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+
+.footer a{
+  display: table-cell;
+  vertical-align: middle;
+}

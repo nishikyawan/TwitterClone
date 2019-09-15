@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>twitterclone課題</title>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <%= link_to image_tag('twicon.png', class:'header-logo'), new_blog_path %>
+      <p>TwitterClone課題</p>
+    </header>
+    <article class="edit_content">
+      <%= form_with(model: @content) do |form| %>
+        <%= form.label :'ツイートを編集する' %>
+        <%= form.text_field :content %>
+        <%= form.submit 'ツイート' %>
+      <% end %>
+    </article>
+    <footer class="footer">
+      <%= link_to 'TOPへ戻る', new_blog_path %>
+      <%= link_to 'DIVE INTO CODEのページへ', 'https://diveintocode.jp/'  %>
+    </footer>
+  </div>
+</body>
+</html>

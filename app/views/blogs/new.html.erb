@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>twitterclone課題</title>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <%= link_to image_tag('twicon.png', class:'header-logo'), new_blog_path %>
+      <p>TwitterClone課題</p>
+    </header>
+    <article class="content">
+      <div class="new_content">
+        <%= form_with(model: @blog, local: true ,url: confirm_blogs_path ) do |form| %>
+          <%= form.label :'いまどうしてる？' %>
+          <%= form.text_field :content %>
+          <%= form.submit 'ツイート', id: :'submit_btn' %>
+        <% end %>
+      </div>
+      <h2>ツイート</h2>
+      <p><%= notice %></P>
+      <div class="pre_content">
+        <table>
+          <tr>
+            <th>Time</th>
+            <th>Tweet</th>
+          </tr>
+          <% @blogs.each do |blog| %>
+            <tr>
+              <td><%= blog.created_at %></td>
+              <td><%= blog.content %></td>
+              <td><%= link_to '編集', edit_blog_path(blog.id), data: { confirm: 'ツイートを編集しますか？' } %></td>
+              <td><%= link_to '削除', blog_path(blog.id), method: :delete, data: { confirm: 'ツイートを削除しますか？' } %></td>
+            </tr>
+          <% end %>
+        </table>
+      </div>
+    </article>
+    <footer class="footer">
+      <%= link_to 'TOPへ戻る', new_blog_path %>
+      <%= link_to 'DIVE INTO CODEのページへ', 'https://diveintocode.jp/'  %>
+    </footer>
+  </div>
+</body>
+</html>
