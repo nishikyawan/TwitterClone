@@ -14,7 +14,7 @@ class BlogsController < ApplicationController
     if @blog.save
       redirect_to new_blog_path, notice: "ツイートしました！"
     else
-      render :new
+      render :confirm
     end
   end
 
